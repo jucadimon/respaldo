@@ -1,0 +1,283 @@
+ESQUEMA RESUMEN DE PROYECTO INGENIERIA ESTRUCTURAL COMPUTACIONAL
+----------------------------------------------------------------------------------------
+Ventana de apertura:
+
+1.Debe contener un logo representativo del programa.
+2.Debe contener un menú de opciones:
+2.1Nueva estructura
+2.2Abrir estructura
+2.3Borrar estructura
+2.4Creditos
+2.5Manual usuario
+
+Ventana Nueva estructura: (ingresando los datos)
+Debe contener un menú de opciones,
+2.1.1Unidades* a utlilizar(Sistema internacional, mks)
+2.1.1.1Metros
+2.1.1.2Centíetros
+2.1.1.3Milíetros
+2.1.1.4Pies
+2.1.1.5Pulgadas
+2.1.1.6Kilonewtons
+2.1.1.7Kgf
+2.1.1.Toneladas
+2.1.2Ubicacion espacial o tridimensional de los "nodos" de la estructura
+2.1.2.1Cuadro donde se ingresen los valores x, y y z de las coordenadas del nodo.
+n°---x---y---z
+1---2---0---0
+2---4---0---0
+3---6---0---0
+2.1.3Los "elementos" pertenecientes a la estructura
+2.1.3.1Cuadro donde se ingresen los inicios y fin de los elementos
+Elemento n°---Nodo Inicial---Nodo Final
+1                 ---1                ---2
+2                 ---1                ---3
+3                 ---2                ---3
+4                 ---3                ---4
+5                 ---3                ---5
+6                 ---4                ---5
+2.1.3.2Una vez definidos los elementos, se dibujan para visualizarlos
+.____.______________.       y          z
+\   /  \                  /\      !        /
+ \/       \             /    \    !      /
+  \          \         /       \   !    /
+   \           \     /          \  !  /
+    \.________\./________.\ !/---------------->x
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |         |      |
+	         |       7-----|----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+2.1.4Los "ejes" locales
+2.1.5Las "secciones" de los elementos
+Deben contener disponibles las siguientes geometrias, con su respectivo grafico alusivo, a cada elemento con la opcion de que se repita el mismo para todos o para cada elemento en especifico,
+2.1.5.1Circular - Cuadro donde te pida el radio
+2.1.5.2Cuadrada - Cuadro donde pida la longitud del lado
+._________.
+I             I
+I             I H=?
+I._______ .I
+<---B--->
+2.1.5.3Rectangular - Cuadro donde pida la longitud del lado y del alto
+2.1.5.4Ele  - Cuadro donde pida la longitud del ladox, ladoy, espesor
+2.1.5..5H (I) - Cuadro donde pida la longitud del ancho, alto, espesor del ala, espesor del alma
+2.1.5.6Tubular  - Cuadro donde pida la longitud del radio esterno, longitud del radio interno, espesor, RDE
+2.1.5.7T - Cuadro donde pida la longitud del ancho, alto, espesor del techo, espesor del alma
+2.1.5..8C - Cuadro donde pida la longitud del alto, ancho y espesor.
+2.1.6Materiales a usar en los elementos, modulo de elasticidad, resistencia
+2.1.6.1Acero
+2.1.6.2Concreto
+2.1.6.3Madera
+2.1.6.4Otros
+2.1.7Cargas sobre la estructura, Cargas puntuales, distribuidas, momentos flectores
+2.1.7.1En nodos, 
+debe contener una tabla donde se le indique, fuerza en x, fuerza en y, fuerza en z, momento en x, momento en y, momenot en z
+n°------nodo------FX-----FY-----FZ------MX------MY------MZ
+1------3-----------10-----10-----10------0--------0--------0
+2------5-----------0------0-------0-------10------10-------10
+2.1.7.2En el largo del elemento
+2.1.7.3Peso propio del elemento
+2.1.8Articulaciones
+2.1.9Apoyos, con sus respectivos graficos alusivos a la situacion, y opciones para restringir movimiento y rotacion en la direccion X, Y y Z; y angulo de rotacion cuando lo amerite:
+2.1.9.1Rodillo
+2.1.9.2Articulado
+2.1.9.3Empotrado
+2.1.9.4Otro
+2.1.9.5Borrar apoyo
+2.1.10Deformaciones
+2.1.10.1Desplazamientos
+2.1.10.2Rotaciones
+
+2.1.11Ejecutar calculos y resultados, graficas respectivas, diagramas de cortante y momentos, deformadas, desplazamientos, deformaciones
+2.1.11.1Reacciones
+nodo-------FX-----FY-----FZ------MX------MY------MZ
+3-----------10-----10-----10------0--------0--------0
+5-----------0------0-------0-------10------10-------10
+2.1.11.2Fuerzas, pueden ser locales o globales,
+Elemento---FX-----FY-----FZ-----^Magnitud Vector Fuerza^
+3-----------10-----10-----10-----50T
+5-----------0------0-------0------30C
+2.1.11.3Momentos
+Elemento---MX------MY------MZ
+3-----------0--------0--------0
+5-----------10------10-------10
+2.1.11.4Desplazamientos
+nodo-------Xi-----Yi-----Zi----Xf-----Yf-----Zf
+3-----------10-----10----10---10-----10-----10
+5-----------0------0------0----0------0-------0
+2.1.11.5Rotaciones
+nodo-------Xi-----Yi-----Zi----Xf-----Yf-----Zf
+3-----------10-----10----10---10-----10-----10
+5-----------0------0------0----0------0-------0
+
+2.1.11.6Diagramas de cortante, momentos para cada elemento, opciones donde se muestren todos los diagramas o solo de un elemento en particular y algunos elementos
+^y
+!
+!      -20Kn
+!      /\          -15Kn
+!    /    \        /\
+!  /        \    /    \
+./--------\/------\----------------->x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ESQUEMA RESUMEN DE PROYECTO INGENIERIA ESTRUCTURAL COMPUTACIONAL
+----------------------------------------------------------------------------------------
+Ventana de apertura:
+
+1.Debe contener un logo representativo del programa.
+2.Debe contener un menú de opciones:
+2.1Nueva estructura
+2.2Abrir estructura
+2.3Borrar estructura
+2.4Creditos
+2.5Manual usuario
+
+Ventana Nueva estructura: (ingresando los datos)
+Debe contener un menú de opciones,
+2.1.1Unidades* a utlilizar(Sistema internacional, mks)
+2.1.1.1Metros
+2.1.1.2Centíetros
+2.1.1.3Milíetros
+2.1.1.4Pies
+2.1.1.5Pulgadas
+2.1.1.6Kilonewtons
+2.1.1.7Kgf
+2.1.1.Toneladas
+2.1.2Ubicacion espacial o tridimensional de los "nodos" de la estructura
+2.1.2.1Cuadro donde se ingresen los valores x, y y z de las coordenadas del nodo.
+n°---x---y---z
+1---2---0---0
+2---4---0---0
+3---6---0---0
+2.1.3Los "elementos" pertenecientes a la estructura
+2.1.3.1Cuadro donde se ingresen los inicios y fin de los elementos
+Elemento n°---Nodo Inicial---Nodo Final
+1                 ---1                ---2
+2                 ---1                ---3
+3                 ---2                ---3
+4                 ---3                ---4
+5                 ---3                ---5
+6                 ---4                ---5
+2.1.3.2Una vez definidos los elementos, se dibujan para visualizarlos
+.____.______________.       y          z
+\   /  \                  /\      !        /
+ \/       \             /    \    !      /
+  \          \         /       \   !    /
+   \           \     /          \  !  /
+    \.________\./________.\ !/---------------->x
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |         |      |
+	         |       7-----|----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+2.1.4Los "ejes" locales
+2.1.5Las "secciones" de los elementos
+Deben contener disponibles las siguientes geometrias, con su respectivo grafico alusivo, a cada elemento con la opcion de que se repita el mismo para todos o para cada elemento en especifico,
+2.1.5.1Circular - Cuadro donde te pida el radio
+2.1.5.2Cuadrada - Cuadro donde pida la longitud del lado
+._________.
+I             I
+I             I H=?
+I._______ .I
+<---B--->
+2.1.5.3Rectangular - Cuadro donde pida la longitud del lado y del alto
+2.1.5.4Ele  - Cuadro donde pida la longitud del ladox, ladoy, espesor
+2.1.5..5H (I) - Cuadro donde pida la longitud del ancho, alto, espesor del ala, espesor del alma
+2.1.5.6Tubular  - Cuadro donde pida la longitud del radio esterno, longitud del radio interno, espesor, RDE
+2.1.5.7T - Cuadro donde pida la longitud del ancho, alto, espesor del techo, espesor del alma
+2.1.5..8C - Cuadro donde pida la longitud del alto, ancho y espesor.
+2.1.6Materiales a usar en los elementos, modulo de elasticidad, resistencia
+2.1.6.1Acero
+2.1.6.2Concreto
+2.1.6.3Madera
+2.1.6.4Otros
+2.1.7Cargas sobre la estructura, Cargas puntuales, distribuidas, momentos flectores
+2.1.7.1En nodos, 
+debe contener una tabla donde se le indique, fuerza en x, fuerza en y, fuerza en z, momento en x, momento en y, momenot en z
+n°------nodo------FX-----FY-----FZ------MX------MY------MZ
+1------3-----------10-----10-----10------0--------0--------0
+2------5-----------0------0-------0-------10------10-------10
+2.1.7.2En el largo del elemento
+2.1.7.3Peso propio del elemento
+2.1.8Articulaciones
+2.1.9Apoyos, con sus respectivos graficos alusivos a la situacion, y opciones para restringir movimiento y rotacion en la direccion X, Y y Z; y angulo de rotacion cuando lo amerite:
+2.1.9.1Rodillo
+2.1.9.2Articulado
+2.1.9.3Empotrado
+2.1.9.4Otro
+2.1.9.5Borrar apoyo
+2.1.10Deformaciones
+2.1.10.1Desplazamientos
+2.1.10.2Rotaciones
+
+2.1.11Ejecutar calculos y resultados, graficas respectivas, diagramas de cortante y momentos, deformadas, desplazamientos, deformaciones
+2.1.11.1Reacciones
+nodo-------FX-----FY-----FZ------MX------MY------MZ
+3-----------10-----10-----10------0--------0--------0
+5-----------0------0-------0-------10------10-------10
+2.1.11.2Fuerzas, pueden ser locales o globales,
+Elemento---FX-----FY-----FZ-----^Magnitud Vector Fuerza^
+3-----------10-----10-----10-----50T
+5-----------0------0-------0------30C
+2.1.11.3Momentos
+Elemento---MX------MY------MZ
+3-----------0--------0--------0
+5-----------10------10-------10
+2.1.11.4Desplazamientos
+nodo-------Xi-----Yi-----Zi----Xf-----Yf-----Zf
+3-----------10-----10----10---10-----10-----10
+5-----------0------0------0----0------0-------0
+2.1.11.5Rotaciones
+nodo-------Xi-----Yi-----Zi----Xf-----Yf-----Zf
+3-----------10-----10----10---10-----10-----10
+5-----------0------0------0----0------0-------0
+
+2.1.11.6Diagramas de cortante, momentos para cada elemento, opciones donde se muestren todos los diagramas o solo de un elemento en particular y algunos elementos
+^y
+!
+!      -20Kn
+!      /\          -15Kn
+!    /    \        /\
+!  /        \    /    \
+./--------\/------\----------------->x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

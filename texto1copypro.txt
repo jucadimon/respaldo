@@ -1,0 +1,122 @@
+Cosas a mejorar en el programa:
+1.color
+2.que se pueda mover la ventana
+3.boton para limpiar el cuadro de texto
+
+
+
+- considerar una opcion para trabajar varios archivos.
+
+
+Jordi Mi?o se me ocurre q seria buena idea q manejes algo como un historial de archivos con las ubicaciones en las que se guardaron por ultima vez y mostrarlos en algo como una lista en la que con un par de clics ya estas trabajando.
+Escriba aqu?...
+Pablo Bruzzone Esta bueno. Yo le har?a un poquito mas trasnparente y un tono gris o que el usuario pueda elegir el color de ultima...y como dice carlos minimizarlo o ponerlo en la bandeja de tareas..
+Carlos Fast-Tag Me gustaria que pudiera minimizarse para seguir viendo la info al fondo
+Jhon Charlie DiMont Hola, es un peque?o proyecto sobre un programa para hacer resumenes a mano, es un editor de texto minimalista que te permite ir guardando informacion por lotes de por ej: una cancion, un resumen de una novela literaria, codigo fuente, etc; con e programa podr?s leer y escribir al mismo tiempo... o esa es la idea.
+Pablo Bruzzone Podrias meterle un slider para la transparencia tambien..
+
+
+Pablo Bruzzone Colocas un control "TrackBar" en el formulario y le defines un minimo y un maximo y el evento "ValueChanged" ..luego en el evento changed cambias la opacidad del form seria algo asi:
+
+trackBar.Minimum = 50;
+trackBar.Maximun = 100;
+trackBar.TickStyle = TickStyle.None;
+
+private void trackBar_ValueChanged(object sender, EventArgs e) {
+
+this.Opacity = trackBar.Value/100d;
+}
+
+
+Escriba aqu?...
+esta es la version 2 del programa copypro
+
+jkn fvj jv j sd?v n?{ks njk v{sn v{ -m {lks {kvn{skn{v kclkn vnfv
+Escriba aquí...
+ñoñoñoñoñoñoññooo
+
+áááááááá´´aoóóóóó´´oóóóóó´´oóóóóóó
+íííí´´iíííííúúú´´uúúúúúú´ñññ
+******//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/8**////*/*/*ññññññññíóúáé
+				************	
+			           ******************
+			          *********************
+			           ********************
+	          *********	            *******************
+	     ****************	              ***************
+	   ******************		*************
+	  ******************                  ************		  **************
+	   ******************	         ******************		*****************
+	  ******************   *******************************	             *******************
+	******************	*********************************          *******************
+	 **************	***********************************        ********************
+*************************	************************************	**************
+
+Nill Frank Flores Para Otra Release Integra Auto guardado con un Timer que monitore el textbox si algo cambio que se guarde
+
+354046046399452
+354046046399452
+
+Tutorial, basico de Bases de Datos, Profesor MVP Juan Carlos Gilarnaz.
+
+Las bases de datos son un conjunto de tablas, las tablas a su vez se conforman por registros y campos;
+se puede hacer una analogia entre las tablas de bases de datos y las tablas de excel (hoojas de calculo), donde los REGISTROS son filas y los CAMPOS son el equivalente a las columnas.
+
+ 
+Modelo relacional: permite relacionar las tablas dentro de la base de datos.
+
+Entidades, claves primarias, claves externas y relaciones.
+
+
+una entidad es una tabla.
+
+Una entidad es la representacion de un objeto o concepto dle mundo real, por ejemplo: un almacen.
+
+Las claves: funcionan como el indice de un libro, de las diferentes partes que componen el objeto o entidad.
+
+Claves primarias identifican cada registro, las claves externas es un campo de una tabla relacional que coincida con la columna.
+
+
+Las relaciones pueden ser uno a uno, uno a varios y varios a varios.
+
+Curso 1: Modelos en Ecología y Gestión de Recursos Naturales
+
+Módulo 1: La Dinámica de Sistemas
+
+Módulo 2: Construcción de un Modelo de Simulación
+
+Módulo 3: Creación de Modelos de Simulación Ambiental
+
+Módulo 4: Creación de Modelos de Simulación Social
+
+
+Ejercicios Prácticos de modelización y simulación de sistemas ambientales
+
+Modelo Dinámica Poblacional
+
+Modelo Ecología de una Reserva Natural
+
+Modelo Agricultura intensiva
+
+Modelo Ganadería intensiva
+
+Modelo de Gestión pesquera
+
+Modelo de Evaluación del Impacto Ambiental
+
+Modelo Presa-depredador
+
+Modelo Desarrollo de una Epidemia
+
+Modelo de la Catástrofe
+
+Modelo de Gestión de un Proyecto
+
+
+PROYECTO DE FIN DE CURSO (PFC)
+
+Como obtener las coordenadas con android:
+
+http://expocodetech.com/expo-tips-como-obtener-la-ubicacion-actual-con-el-gps-de-android/
+
+

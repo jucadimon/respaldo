@@ -1,0 +1,331 @@
+
+using System;
+namespace ing
+{
+	public class clase1
+	{
+		public static void Main()
+		{
+			Console.WriteLine("Hola mundo");
+		}
+	}
+}
+                                 1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4        |
+	         |       |        |      |
+	         |       7------|----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+
+PROYECCIONES ORTOGONALES:    
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+                                1----------2
+	               /|              / |
+	             /  |            /   |
+	           /    |          /     |
+	         3----------4      |
+	         |       |        |       |
+	         |       7---- |----8
+	         |      /         |    /
+	         |    /           |  /
+	         |  /             |/
+	         5----------6
+
+
+METODO BURBUJA PARA ORDENAR DATOS:
+
+for (int i =0; i<Tem.length-1; i++)
+{
+	for (int j =i+1; j<Tem.length-1; j++)
+	{
+		if (Tem[i]>Tem[j])
+		{
+			Aux=Tem[i];
+			Tem[i]=Tem[j];
+			Tem[j]=Aux;
+		}
+	}
+}
+
+
+Hacer dibujos con caracteres de letras,
+Esta seria una ventana:
+
+	.----------. .----------.
+	.	. .	 .
+	.	. .	 .
+	.	. .	 .
+	.	. .	 .
+	.	. .	 .
+	.----------. .----------.
+
+	.----------. .----------.
+	.	. .	 .
+	.	. .	 .
+	.	. .	 .
+	.	. .	 .
+	.	. .	 .
+	.----------. .----------.
+
+
+Escriba aquí...
+//          EXPORTAR TXT - METODO 1
+            ostipo = Environment.OSVersion.ToString();//saber el sistema operativo que se usa
+            SistemaOperativo = ostipo.Contains("Unix");
+
+            archivoGenerado = new StringBuilder();//Definimos un comodin estatico
+            // string fecha = "";
+            // fecha = DateTime.Now.ToString();    //pedimos la hora al sistema y almacenamos en fecha
+
+            archivoGenerado.AppendLine(txtCaja.Text);//añadimos la fecha al comodin
+
+            String reg = "";    //creamos un objeto tipo String del espacio de nombres Text
+            reg = archivoGenerado.ToString();    //convertimos el comodin a texto
+
+            if (SistemaOperativo)
+            {
+                directorio1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/texto.txt";
+                // string directorio2 = Environment.CurrentDirectory + "/texto"+fecha+".txt";
+            }
+            else
+            {
+                directorio1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\texto.txt";
+                // string directorio2 = Environment.CurrentDirectory + "\\texto"+fecha+".txt";
+            }
+
+            archivoGeneradoA = new FileStream(directorio1, FileMode.Append);
+            archivoGeneradoA.Write(Encoding.GetEncoding("windows-1252").GetBytes(reg), 0, reg.Length);//escribimos dentro del archivo
+            archivoGeneradoA.Close();//Cerra el archivo creado
+            // Encoding.GetEncoding("windows-1252")     cambiar esta linea en los programas de exportar a txt 
+            // para solucionar le problema de la stildes y de las "ñ"
+            // archivoGeneradoA.Write(ASCIIEncoding.ASCII.GetBytes(reg), 0, reg.Length); Esta es la linea vieja
+
+            MessageBox.Show("Exportación correcta! Revise el archivo en su escritorio.");
+
+// FIN EXPORTAR
+//          EXPORTAR TXT - METODO 2: saveFileDialog
+
+            archivoGenerado = new StringBuilder();//Definimos un comodin publico
+            archivoGenerado.AppendLine(txtCaja.Text);//añadimos la fecha al comodin
+
+            String reg = "";    //creamos un objeto tipo String del espacio de nombres Text
+            reg = archivoGenerado.ToString();    //convertimos el comodin a texto
+
+            saveFileDialog1.Title = "Guardar Archivo de Texto";            
+            saveFileDialog1.Filter = "Archivo de Texto (.txt) |*.txt";
+            saveFileDialog1.DefaultExt="txt";
+            saveFileDialog1.AddExtension = true;
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+{
+            string directorio1 = saveFileDialog1.FileName;
+            
+            archivoGeneradoA = new FileStream(directorio1, FileMode.Append);
+            archivoGeneradoA.Write(Encoding.GetEncoding("windows-1252").GetBytes(reg), 0, reg.Length);//escribimos dentro del archivo
+            archivoGeneradoA.Close();//Cerra el archivo creado
+            MessageBox.Show("Exportación correcta! Revise el archivo en su escritorio.");
+}
+
+// FIN EXPORTAR
+Escriba aquí...
+//          EXPORTAR PDF - METODO 1: saveFileDialog
+
+            archivoGenerado = new StringBuilder();//Definimos un comodin publico
+            archivoGenerado.AppendLine(txtCaja.Text);//añadimos la fecha al comodin
+
+            String reg = "";    //creamos un objeto tipo String del espacio de nombres Text
+            reg = archivoGenerado.ToString();    //convertimos el comodin a texto
+
+            saveFileDialog1.Title = "Guardar Archivo de Texto en PDF";
+            saveFileDialog1.Filter = "Archivo de Texto (.pdf) |*.pdf";
+            saveFileDialog1.DefaultExt = "pdf";
+            saveFileDialog1.AddExtension = true;
+            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string directorio1 = saveFileDialog1.FileName;
+
+                // Creamos el documento con el tamaño de página tradicional
+                iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.LETTER);
+                // Indicamos donde vamos a guardar el documento
+                PdfWriter writer = PdfWriter.GetInstance(doc,
+                    new FileStream(directorio1,
+                        FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite));
+                // Le colocamos el título y el autor
+                // **Nota: Esto no será visible en el documento
+                doc.AddTitle("INFORME PDF");
+                doc.AddCreator("JUAN CARLOS DIAZ MONTIEL");
+
+                doc.Open(); // Abrimos el archivo
+                // Creamos el tipo de Font que vamos utilizar
+                iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 14, iTextSharp.text.Font.NORMAL, BaseColor.BLUE);
+
+                doc.Add(new Paragraph("---")); // Escribimos el encabezamiento en el documento
+                doc.Add(Chunk.NEWLINE);
+
+                doc.Add(new Paragraph(reg)); //Añadir texto a exportar
+
+                doc.Close(); // y cerramos el documento
+                writer.Close();
+
+                MessageBox.Show("Exportación correcta! Revise el archivo en su escritorio.");
+            }
+
+            // FIN EXPORTAR
+
+
++------?????------+
+TOP
++------?????------+
+
+Escudo de Armas
+2016
+??????????????????????
+
++-++-+
++---¦--¦-+
++-+-¦-++---+-+
+¦ T N T ¦
++-+---++-¦-+-+
++-¦--¦---+
++-++-+
+
+??????????????????????
+
+----------------------------
+
+MACROBLOQUES OFF
+Casitas?? :v jajaja 
+-76/11 mia y solo mia
+oasis mios y solo mios
+
+????????
+????????
++--------------+
+¦¯_¯_¯_¯_¯_¯_¯_¦
+¦¯_¯_¯_¯_¯_¯_¯_¦
+¦¯_¯_¯_¯_¯_¯_¯_¦
+¦¯_¯_¯_¯_¯_¯_¯_¦
+¦¯_¯_¯_¯_¯_¯_¯_¦
+¦¯_¯_¯_¯_¯_¯_¯_¦
+¦¯_¯_¯_¯_¯_¯_¯_¦
++--------------+
+????????
+????????
+
+
+The O??g??al®
+¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+Cs????g?? © 2016™
+
+------------------------------------
+
+Natares:
+
+[x|y]-65/12[/x|y]
+[x|y]-66/9[/x|y]
+[x|y]-63/10[/x|y]
+[x|y]-60/19[/x|y]
+
+Oasis:
+
+[x|y](?-?74??|??9??)??[/x|y]
+
+Aldeas:
+-Abas de Argos
+-Duende Burlon
+-Dragon13
+-Lorgorrion
+
+-------------------------------
+
+Aldeas:
+
+Nombre	Oasis	Habitantes	Coordenadas
+Abas de Argos (Capital)		96	??(?-?74??|??13??)
+
+---------------------------------
+
+
+Escriba aquí...
+

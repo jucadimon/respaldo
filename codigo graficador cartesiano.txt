@@ -1,0 +1,73 @@
+---------------------------------------------------------------------------------------------
+class Grafico1 //Cartesiano
+    {
+        int x, y, ancho, alto, centrox, centroy;
+        public Graphics grafico;
+        Pen lapiz = new Pen(Color.Black, 0.9f);
+
+        public void set_x(int valor)
+        {
+            x = valor;
+        }
+        public void set_y(int valor)
+        {
+            y = valor;
+        }
+        public void DibujarPlanoCartesiano(PictureBox pbox)
+        {
+            int centroX = pbox.Width / 2, centroY = pbox.Height / 2;
+            Bitmap bmp = new Bitmap(pbox.Width, pbox.Height);
+            grafico = Graphics.FromImage(bmp); //Desde un picturebox existente
+            grafico.Clear(Color.Transparent);
+            grafico.SmoothingMode = SmoothingMode.HighQuality;
+            grafico.TranslateTransform(centroX, centroY);
+            grafico.ScaleTransform(1, -1);
+            grafico.DrawLine(lapiz, centroX * -1, 0, centroX * 2, 0);//dibujamos eje x
+            grafico.DrawLine(lapiz, 0, centroY, 0, centroY * -1);//dibujamos eje y
+            //subdivisiones de los ejes:
+            for (int i = -centroX; i < centroX; i += 8)
+            {
+                //divisiones para el ejeY
+                grafico.DrawLine(lapiz, 5, i, -5, i);//linea horizontal
+                //divisiones para el ejeX
+                grafico.DrawLine(lapiz, i, 5, i, -5);//linea vertical
+            }
+            pbox.Image = bmp;
+        }
+    }
+
+------------------------------------------------------------------------------------------
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
+
+
+namespace Graficador1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        Grafico1 cartesiano = new Grafico1();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cartesiano.DibujarPlanoCartesiano(this.pictureBox1);
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string nombre = textBox1.Text.ToString();
+            string directorio1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                "\\grafico_cartesiano_" + nombre + ".png";
+            var mm = (Bitmap)pictureBox1.Image.Clone();
+            mm.Save(directorio1, ImageFormat.Png);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------
+
+
+
